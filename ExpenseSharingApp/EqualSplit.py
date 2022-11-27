@@ -1,6 +1,7 @@
-import User
-import Split
+from ExpenseSharingApp.User import User
+from ExpenseSharingApp.Split import Split
+
 
 class EqualSplit(Split):
-    def __init__(self, user):
-        super(Split, self).__init__(user)
+    def __init__(self, user: User):
+        super().__init__(user)
