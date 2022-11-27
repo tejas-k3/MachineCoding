@@ -4,5 +4,5 @@ from ExpenseSharingApp.Split import Split
 
 class ExactSplit(Split):
     def __init__(self, user:User, amount:float):
-        super(Split, self).__init__(user)
+        super().__init__(user)
         self.__amount = amount

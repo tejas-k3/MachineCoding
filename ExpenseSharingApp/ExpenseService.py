@@ -6,7 +6,7 @@ from ExpenseSharingApp.EqualExpense import EqualExpense
 from ExpenseSharingApp.ExpenseMetadata import ExpenseMetadata
 
 class ExpenseService():
-    def createExpense(self, expenseType:ExpenseType, amount:float, paidBy:str, splits:list, expenseMetadata:ExpenseMetadata):
+    def createExpense(expenseType:ExpenseType, amount:float, paidBy:str, splits:list, expenseMetadata=None):
         match expenseType:
             case ExpenseType.EXACT:
                 return ExactExpense(amount, paidBy, splits, expenseMetadata)
@@ -16,7 +16,7 @@ class ExpenseService():
                     split.setAmount(amount * percentSplit.getPercent() / 100)
                 return PercentExpense(amount, paidBy, splits, expenseMetadata)
             case ExpenseType.EQUAL:
-                totalSplits = splits.size()
+                totalSplits = len(splits)
                 splitAmount = round(amount*100/totalSplits)/100
                 for split in splits:
                     split.setAmount(splitAmount)

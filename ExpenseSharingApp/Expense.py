@@ -1,16 +1,14 @@
 from abc import ABC, abstractmethod
-from ExpenseSharingApp.ExpenseMetadata import ExpenseMetadata
 from ExpenseSharingApp.Split import Split
 from ExpenseSharingApp.User import User
 
 
 class Expense(ABC):
-    def __init__(self, amount: float, paidBy: str, splits: list[Split], metadata: ExpenseMetadata):
+    def __init__(self, amount: float, paidBy: str, splits: list[Split], metadata=None):
         self.__amount = amount
         self.__paidBy = paidBy
         self.__splits = splits
         self.__metadata = metadata
-        # self.__id = ''
 
     def getId(self):
         return self.__id
@@ -39,7 +37,7 @@ class Expense(ABC):
     def getMetadata(self):
         return self.__metadata
 
-    def setMetadata(self, metadata: ExpenseMetadata):
+    def setMetadata(self, metadata=None):
         self.__metadata = metadata
 
     @abstractmethod

@@ -4,7 +4,7 @@ from ExpenseSharingApp.ExpenseMetadata import ExpenseMetadata
 
 
 class PercentExpense(Expense):
-    def __init__(self, amount:float, paidBy:str, splits:list, expenseMetadata:ExpenseMetadata):
+    def __init__(self, amount:float, paidBy:str, splits:list, expenseMetadata=None):
         super().__init__(amount, paidBy, splits, expenseMetadata)
 
     # @Overrides

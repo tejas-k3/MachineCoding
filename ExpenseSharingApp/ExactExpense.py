@@ -5,7 +5,7 @@ from ExpenseSharingApp.User import User
 from ExpenseSharingApp.Split import Split
 
 class ExactExpense(Expense):
-    def __init__(self, amount: float, paidBy: User, splits: list[Split], expenseMetadata: ExpenseMetadata):
+    def __init__(self, amount: float, paidBy: User, splits: list[Split], expenseMetadata=None):
         super().__init__(amount, paidBy, splits, expenseMetadata)
 
     # @Overrides
@@ -16,7 +16,6 @@ class ExactExpense(Expense):
         totalAmount = super().getAmount()
         sumSplit = 0
         for split in super().getSplits():
-            # Issue is below line
             exactSplit = ExactSplit(split)
             sumSplit += exactSplit.getAmount()
 

@@ -6,7 +6,7 @@ from ExpenseSharingApp.Split import Split
 
 
 class EqualExpense(Expense):
-    def __init__(self, amount: float, paidBy: User, splits: list[Split], expenseMetadata: ExpenseMetadata):
+    def __init__(self, amount: float, paidBy: User, splits: list[Split], expenseMetadata=None):
         super().__init__(amount, paidBy, splits, expenseMetadata)
 
     # @Overrides

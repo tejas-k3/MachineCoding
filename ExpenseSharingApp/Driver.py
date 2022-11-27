@@ -4,7 +4,7 @@ from ExpenseSharingApp.EqualSplit import EqualSplit
 from ExpenseSharingApp.ExactSplit import ExactSplit
 from ExpenseSharingApp.PercentSplit import PercentSplit
 from ExpenseSharingApp.ExpenseType import ExpenseType
-
+# from ExpenseSharingApp.ExpenseMetadata import ExpenseMetadata
 
 def main():
     expenseManager = ExpenseManager()
@@ -32,17 +32,18 @@ def main():
                     case "EQUAL":
                         for i in range(countUsers):
                             splits.append(EqualSplit(expenseManager.userMap[commands[4 + i]]))
-                            expenseManager.addExpense(ExpenseType.EQUAL, amount, paidBy, splits, None)
+                        expenseManager.addExpense(ExpenseType.EQUAL, amount, paidBy, splits, None)
+
                     case "EXACT":
                         for i in range(countUsers):
                             splits.append(
                                 ExactSplit(expenseManager.userMap[commands[4 + i]], commands[5 + countUsers + i]))
-                            expenseManager.addExpense(ExpenseType.EXACT, amount, paidBy, splits, None)
+                        expenseManager.addExpense(ExpenseType.EXACT, amount, paidBy, splits, None)
                     case "PERCENT":
                         for i in range(countUsers):
                             splits.append(
                                 PercentSplit(expenseManager.userMap[commands[4 + i]], commands[5 + countUsers + i]))
-                            expenseManager.addExpense(ExpenseType.PERCENT, amount, paidBy, splits, None)
+                        expenseManager.addExpense(ExpenseType.PERCENT, amount, paidBy, splits, None)
 
 
 if __name__ == "__main__":
