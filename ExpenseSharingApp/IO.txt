@@ -1,0 +1,30 @@
+Sample Input
+SHOW
+SHOW u1
+EXPENSE u1 1000 4 u1 u2 u3 u4 EQUAL
+SHOW u4
+SHOW u1
+EXPENSE u1 1250 2 u2 u3 EXACT 370 880
+SHOW
+EXPENSE u4 1200 4 u1 u2 u3 u4 PERCENT 40 20 20 20
+SHOW u1
+SHOW
+
+Sample Output
+No balances
+No balances
+User4 owes User1: 250
+User2 owes User1: 250
+User3 owes User1: 250
+User4 owes User1: 250
+User2 owes User1: 620
+User3 owes User1: 1130
+User4 owes User1: 250
+User1 owes User4: 230
+User2 owes User1: 620
+User3 owes User1: 1130
+User1 owes User4: 230
+User2 owes User1: 620
+User2 owes User4: 240
+User3 owes User1: 1130
+User3 owes User4: 240
