@@ -1,0 +1,44 @@
+After initialization, output:
+
+- - - -
+- - - -
+2 - - -
+- - 2 -
+Input:
+
+1
+Output:
+
+- - - -
+- - 2 -
+- - - 2
+- - - 2
+Input:
+
+3
+Output:
+
+- - - -
+- - - -
+2 - - -
+- - 2 4
+Input:
+
+3
+Output:
+
+- - - -
+- - - -
+- - 2 -
+2 - 2 4
+Input:
+
+1
+Output:
+
+- - - -
+- - - -
+- 2 - 2
+- - 4 4
+
+AND SO ON...
