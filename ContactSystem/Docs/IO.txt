@@ -1,0 +1,15 @@
+Input:
+
+ADD T K 9812312
+UPDATE 9812312 FIRSTNAME Abhi
+UPDATE 9812312 LASTNAME AN
+SEARCH NAME AN
+
+Output:
+Contact added successfully
+Updated first name successfully for 9812312
+Updated last name successfully for 9812312
+Number of contacts found : 1
+FirstName :  Abhi
+LastName :  AN
+Phone Number :  9812312
