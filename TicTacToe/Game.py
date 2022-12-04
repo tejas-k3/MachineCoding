@@ -1,23 +1,23 @@
 from collections import deque
-from tkinter import Grid
-
+from TicTacToe.Player import Player
+from TicTacToe.Board import Board
 
 class Game:
     def __init__(self):
-        self.Board = Grid()
+        self.Board = Board()
         self.players = deque()
 
     def getFreeCells(self):
         return self.Board.getFreeCells()
 
-    def putChar(self, x, y, X0):
+    def putChar(self, x:str, y:str, X0:str):
         self.Board.put(x, y, X0)
 
     def numberofPlayer(self):
         return len(self.players)
 
-    def addPlayer(self, player):
-        if (self.numberofPlayer() == 0):
+    def addPlayer(self, player:Player):
+        if (self.numberofPlayer() == 2):
             return
         self.players.append(player)
 
@@ -39,5 +39,5 @@ class Game:
         options = self.getFreeCells()
         win = self.putChar("Any random x,y from options", currPlayer.getChar())
         if (win):
-            return player
+            return Player
         self.addPlayer(currPlayer)

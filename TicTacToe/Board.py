@@ -4,10 +4,10 @@ class Board:
         self.grid = [["" for i in range(3)] for j in range(3)]
 
 
-    def getChar(self, x, y):
+    def getChar(self, x:str, y:str):
         return self.grid[x][y]
 
-    def put(self, x, y, char):
+    def put(self, x:str, y:str, char:str):
         if (self.getChar(x, y) != ""):
                 return "Invalid Move"
         self.grid[x][y] = char
