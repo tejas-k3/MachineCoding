@@ -33,14 +33,26 @@ class Contact:
 
     def updatePhoneNumber(self, phoneNumber: str):
         """
-        Method
+        Method to update phone number
         :param phoneNumber:
-        :return:
+        :return: None
         """
         self.phoneNumber = phoneNumber
 
     def updateFirstName(self, firstName: str):
+        """
+        Method to update first name
+        :param self:
+        :param firstName:
+        :return: None
+        """
         self.firstName = firstName
 
     def updateLastName(self, lastName: str):
+        """
+        Method to update last name
+        :param self:
+        :param lastName:
+        :return:
+        """
         self.lastName = lastName

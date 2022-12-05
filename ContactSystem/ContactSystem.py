@@ -32,7 +32,7 @@ class ContactSystem:
         :return: List of contacts
         """
         searchResult = []
-
+        # Will be replaced by SearchAlgorithm class
         match searchValueType:
             case 'NAME':
                 for contact in self.contacts:
