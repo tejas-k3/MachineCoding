@@ -1,7 +1,7 @@
 from TrelloApp.Trello import Trello
 
 
-def main():
+def main(self, Card):
     fakeTrello = Trello()
     userInput = []
     while True:
@@ -384,8 +384,8 @@ def main():
                 if(cardId in fakeTrello.freeCards):
                     card = fakeTrello.freeCards[cardId]
                     print( {
-                        id: card.id,
-                        name: card.name
+                        "id": card.id,
+                        "name": card.name
                     } )
                     continue
                 else:
