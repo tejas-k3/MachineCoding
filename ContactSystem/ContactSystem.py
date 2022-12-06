@@ -19,9 +19,17 @@ class ContactSystem:
         self.contacts[phoneNumber] = Contact(firstName, lastName, phoneNumber)
         print("Contact added successfully")
 
-    # def deleteContact(self, phoneNumber):
-    #     del self.contacts[phoneNumber]
-    #     pass
+    def deleteContact(self, phoneNumber: str):
+        """
+        Method to delete a contact.
+        :param phoneNumber: String
+        :return: None
+        """
+        if phoneNumber in self.contacts:
+            del self.contacts[phoneNumber]
+            print("Contact with number {} deleted successfully.".format(phoneNumber))
+        else:
+            print("Contact doesn't exist!")
 
     # Total count & Search Result
     def searchContact(self, searchValueType: str, value: str):
@@ -38,7 +46,7 @@ class ContactSystem:
                 for contact in self.contacts:
                     # Case-insensitive lookup in firstname and lastname of the contact
                     if value.lower() in [name.lower() for name in [self.contacts[contact].getFirstName(),
-                                                               self.contacts[contact].getLastName()]]:
+                                                                   self.contacts[contact].getLastName()]]:
                         searchResult.append(self.contacts[contact])
             case 'PHONENUMBER':
                 searchResult = [self.contacts[contact] for contact in self.contacts if value in contact]
