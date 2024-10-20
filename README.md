@@ -16,7 +16,7 @@
 - [BOOKMYSHOW](./BookMyShow) :: Implement a booking application where focus is on concurrent booking support.
 - [ZOMATO](./Zomato) :: Implement a food ordering application.
 - [DOCUMENT_SEARCH](./DocumentSearch) :: Design in-memory document search
-- [DATABASE](./Database) :: Design in-memory SQL based database with insert, get and filter features.
+- [RDBMS](./RDBMS) :: Design in-memory SQL based database with insert, get and filter features.
 - [DOCUMENT_GROUP](/.DocumentGroup) :: User can invite other users to edit the document, Invited user cannot delete the document other user has created, Invited user can only edit if he has the permission to do so.
 
 # General Evaluation Criteria:
